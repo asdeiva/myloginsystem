@@ -7,6 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css'],
 })
+
 export class SignupComponent implements OnInit {
   signupForm!: FormGroup;
 
@@ -29,6 +30,7 @@ export class SignupComponent implements OnInit {
       mobile: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
     });
   }
+
 
   onSubmit() {
     if (this.signupForm.valid) {

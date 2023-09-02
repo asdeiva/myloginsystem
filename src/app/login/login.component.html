@@ -42,6 +42,10 @@
     background-color: #f2f2f2;
     padding: 20px;
   }
+  p{
+    text-align: center;
+  }
+
   </style>
 <div>
   <h1>SIGNIN</h1>
@@ -50,5 +54,7 @@
     <input type="password" formControlName="password" placeholder="Password">
     <button type="submit" [disabled]="!loginForm.valid" >Sign In </button>
   </form>
+  <p >Don't Have an account? <a routerLink="/signup">Sign Up Here</a> </p>
+
 </div>
   

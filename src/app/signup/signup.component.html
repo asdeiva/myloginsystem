@@ -42,6 +42,9 @@
     background-color: #f2f2f2;
     padding: 20px;
   }
+  p{
+    text-align: center;
+  }
   </style>
 <div>
   <h1>SIGNUP</h1>
@@ -53,5 +56,6 @@
     <input type="text" formControlName="mobile" placeholder="Mobile">
     <button type="submit" [disabled]="!signupForm.valid" >Signup </button>
   </form>
+  <p>Already Have an account? <a routerLink="/login">Sign In Here</a></p>
   
 </div>
