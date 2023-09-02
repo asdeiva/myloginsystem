@@ -1,0 +1,59 @@
+<style>
+  *{
+    padding: 20px;
+  }
+  input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type=password]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  button {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  h1{
+    text-align: center;
+    color: #45a049;
+  }
+  div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  </style>
+<div>
+  <h1>SIGNUP</h1>
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="name" placeholder="Name">
+    <input type="text" formControlName="userId" placeholder="User ID">
+    <input type="text" formControlName="email" placeholder="Email">
+    <input type="password" formControlName="password" placeholder="Password">
+    <input type="text" formControlName="mobile" placeholder="Mobile">
+    <button type="submit" [disabled]="!signupForm.valid" >Signup </button>
+  </form>
+  
+</div>
